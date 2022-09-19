@@ -19,3 +19,17 @@ models:
         tests:
           - unique
           - not_null
+    
+  - name: my_third_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for the city"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "The name of the city"
+        tests:
+          - unique
+          - not_null
