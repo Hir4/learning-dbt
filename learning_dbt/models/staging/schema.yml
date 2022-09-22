@@ -1,0 +1,49 @@
+
+version: 2
+
+models:
+  - name: stg_bra_cities
+    description: "A starter dbt model"
+    columns:
+      - name: "city_countrycode"
+        description: "The countrycode of the city"
+        tests:
+          - not_null
+      - name: city_name
+        description: "The name of the city"
+        tests:
+          - not_null
+      - name: city_population
+        description: "The population of the city"
+        tests:
+          - not_null
+
+  - name: stg_bra_language
+    description: "A starter dbt model"
+    columns:
+      - name: "language_countrycode"
+        description: "The countrycode of the city"
+        tests:
+          - not_null
+      - name: language
+        description: "The language of the city"
+        tests:
+          - not_null
+      - name: percentage
+        description: "The percentage of the language"
+
+  - name: stg_bra_country
+    description: "A starter dbt model"
+    columns:
+      - name: "code"
+        description: "The countrycode of the city"
+        tests:
+          - not_null
+      - name: country_name
+        description: "The name of the country"
+        tests:
+          - not_null
+      - name: continent
+        description: "The continent of the country"
+        tests:
+          - not_null
