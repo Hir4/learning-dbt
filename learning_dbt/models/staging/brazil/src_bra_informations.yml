@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: bra_info
+    database: postgres
+    schema: public
+    tables:
+      - name: city
+      - name: country
+      - name: countrylanguage
+      - name: dim_brazil
+        loaded_at_field: inserted_at
+        freshness:
+          warn_after: {count: 1, period: minute}
+          error_after: {count: 24, period: hour}

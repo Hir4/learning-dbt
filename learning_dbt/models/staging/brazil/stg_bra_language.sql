@@ -3,7 +3,7 @@ with countrylanguage as (
     countrycode as language_countrycode,
     language,
     percentage
-  from public.countrylanguage
+  from {{ source('bra_info', 'countrylanguage') }}
   where countrycode = 'BRA'
 )
 

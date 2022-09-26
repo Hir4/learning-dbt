@@ -7,18 +7,29 @@ models:
     columns:
       - name: continent
         description: "The continent of the country"
-
+        tests:
+          - not_null
       - name: country_name
         description: "The name of the country"
-        
+        tests:
+          - not_null
       - name: city_name
         description: "The name of the city"
-
+        tests:
+          - not_null
       - name: city_population
         description: "The population count of the city"
-      
+        tests:
+          - not_null
       - name: "language"
         description: "The language of the city"
-
+        tests:
+          - not_null
       - name: percentage
         description: "The percentage of the language"
+        tests:
+          - not_null
+      - name: inserted_at
+        description: "The date that the data was inserted"
+        tests:
+          - not_null

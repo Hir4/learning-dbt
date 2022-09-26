@@ -3,7 +3,7 @@ with cities as (
     countrycode as city_countrycode,
     name as city_name,
     population as city_population
-  from public.city
+  from {{ source('bra_info', 'city') }}
   where countrycode = 'BRA'
 )
 

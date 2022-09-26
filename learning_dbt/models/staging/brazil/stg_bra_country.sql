@@ -3,7 +3,7 @@ with country as (
     code,
     name as country_name,
     continent
-  from public.country
+  from {{ source('bra_info', 'country') }}
   where code = 'BRA'
 )
 
