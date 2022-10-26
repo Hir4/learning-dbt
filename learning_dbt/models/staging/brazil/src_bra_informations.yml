@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: bra_info
-    database: postgres
+    database: dddm9fr5kurcnr
     schema: public
     tables:
       - name: city
