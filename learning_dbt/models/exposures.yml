@@ -1,0 +1,66 @@
+version: 2
+exposures:
+
+  - name: daily_jaffle_metrics
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('dim_brazil')
+      - ref('stg_bra_country')
+      - source('bra_info', 'city')
+
+    owner:
+      name: Victoria Claro
+      email: data@stone.com.br
+
+  - name: weekly_jaffle_metrics
+    type: dashboard
+    maturity: medium
+    url: https://bi.tool/dashboards/2
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('dim_brazil')
+      - ref('stg_bra_country')
+      - source('bra_info', 'city')
+
+    owner:
+      name: Victoria Claro
+      email: data@stone.com.br
+
+  - name: experimental_jaffle_metrics
+    type: analysis
+    maturity: medium
+    url: https://bi.tool/experimental/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('dim_brazil')
+      - ref('stg_bra_country')
+      - source('bra_info', 'city')
+
+    owner:
+      name: Victoria Claro
+      email: data@stone.com.br
+
+  - name: app_jaffle_metrics
+    type: application
+    maturity: medium
+    url: https://bi.tool/app/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('dim_brazil')
+      - ref('stg_bra_country')
+      - source('bra_info', 'city')
+
+    owner:
+      name: Victoria Claro
+      email: data@stone.com.br
