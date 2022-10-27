@@ -1,3 +1,3 @@
 {% macro get_datetime_now() %}
-    NOW()
+    NOW() 
 {% endmacro %}

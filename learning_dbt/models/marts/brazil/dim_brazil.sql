@@ -17,7 +17,7 @@ select
   city_population,
   language,
   percentage,
-  {{ get_datetime_now() }} as inserted_at
+  {{ dl_inserted_at() }} 
 from country 
   full outer join city on country.code = city.city_countrycode
   full outer join language on language.language_countrycode = city.city_countrycode
